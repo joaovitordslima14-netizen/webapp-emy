@@ -33,7 +33,7 @@ body {
   grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 0;
   padding: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -64,9 +64,10 @@ body {
 .background-overlay {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 35%),
-    linear-gradient(180deg, rgba(10, 14, 34, 0.3), rgba(15, 18, 32, 0.4));
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent 35%),
+    linear-gradient(180deg, rgba(10, 14, 34, 0.1), rgba(15, 18, 32, 0.15));
   pointer-events: none;
+  z-index: -1;
 }
 
 .screen {
