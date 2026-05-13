@@ -69,9 +69,22 @@ function updateBackgrounds() {
   console.log("Found bgItems:", bgItems.length);
   bgItems.forEach((item, position) => {
     const currentIndex = (slideIndex + position * 3) % backgroundImages.length;
-    console.log("Setting image for position", position, ":", backgroundImages[currentIndex]);
-    item.style.backgroundImage = `url('${backgroundImages[currentIndex]}')`;
-    item.classList.add("visible");
+    const imageUrl = backgroundImages[currentIndex];
+    console.log("Setting image for position", position, ":", imageUrl);
+    
+    // Preload image to check if it exists
+    const img = new Image();
+    img.onload = function() {
+      console.log("Image loaded successfully:", imageUrl);
+      item.style.backgroundImage = `url('${imageUrl}')`;
+      item.classList.add("visible");
+    };
+    img.onerror = function() {
+      console.error("Failed to load image:", imageUrl);
+      item.style.backgroundColor = "rgba(100, 50, 100, 0.5)";
+      item.classList.add("visible");
+    };
+    img.src = imageUrl;
   });
 }
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'surpresa-emy-v1';
+const CACHE_NAME = 'surpresa-emy-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -14,18 +14,27 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll(urlsToCache);
       })
+      .then(() => self.skipWaiting())
   );
 });
 
 // Fetch event - serve from cache when offline
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
+  // Don't cache image requests - always fetch from network
+  if (event.request.url.includes('/images/')) {
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        return new Response('Image not available', { status: 404 });
       })
-  );
+    );
+  } else {
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          return response || fetch(event.request);
+        })
+    );
+  }
 });
 
 // Activate event - clean up old caches
@@ -39,6 +48,6 @@ self.addEventListener('activate', event => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
 });
