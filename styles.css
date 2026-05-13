@@ -42,7 +42,7 @@ body {
   min-height: 100vh;
   border-radius: 28px;
   overflow: hidden;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -195,10 +195,15 @@ button:hover {
   background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow);
   text-align: center;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 .message-box p {
   margin: 0 0 20px;
+  text-align: left;
+  line-height: 1.6;
+  white-space: pre-line;
 }
 
 .message-box img {
