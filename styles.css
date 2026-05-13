@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: rgba(15, 18, 32, 0.78);
+  --card: rgba(255, 255, 255, 0.92);
+  --accent: #ff9ec5;
+  --accent-2: #7f8bff;
+  --text: #1f1f2e;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: #111;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.background-grid {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-item {
+  position: relative;
+  min-height: 100vh;
+  border-radius: 28px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.bg-item.visible {
+  opacity: 0.92;
+  transform: scale(1);
+}
+
+.bg-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.42));
+}
+
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 35%),
+    linear-gradient(180deg, rgba(10, 14, 34, 0.75), rgba(15, 18, 32, 0.9));
+  pointer-events: none;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-card,
+.content-card {
+  width: min(520px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.login-card h1,
+.content-card h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.login-card p,
+.content-card p {
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(31, 31, 46, 0.16);
+  border-radius: 18px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.error {
+  color: #bb1f4c;
+  margin-top: 10px;
+  min-height: 24px;
+}
+
+.top-bar {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 3;
+}
+
+.date-card {
+  min-width: 140px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.date-number {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.date-label {
+  display: block;
+  margin-top: 8px;
+  color: #555;
+}
+
+.center-panel {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.message-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.message-box p {
+  margin: 0 0 20px;
+}
+
+.message-box img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-note {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #e9e9f0;
+  z-index: 3;
+}
+
+@media (max-width: 560px) {
+  .login-card,
+  .content-card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+
+  .top-bar {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "webapp-emy",
+  "version": "1.0.0",
+  "description": "WebApp fofo com slideshow de fotos e mensagem especial",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["webapp", "slideshow", "personal"],
+  "author": "",
+  "license": "ISC"
+}

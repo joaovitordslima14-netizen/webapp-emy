@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebApp Fofo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-grid" id="background-grid">
+    <div class="bg-item"></div>
+    <div class="bg-item"></div>
+    <div class="bg-item"></div>
+  </div>
+  <div class="background-overlay"></div>
+
+  <div id="login-screen" class="screen">
+    <div class="login-card">
+      <h1>Bem-vindo</h1>
+      <p>Entre com o login correto para acessar as datas e a mensagem especial.</p>
+      <form id="login-form">
+        <label for="username">Usuário</label>
+        <input id="username" type="text" placeholder="Digite seu usuário" autocomplete="username" required />
+        <label for="password">Senha</label>
+        <input id="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required />
+        <button type="submit">Fazer login</button>
+      </form>
+      <div id="login-error" class="error"></div>
+    </div>
+  </div>
+
+  <div id="app" class="hidden">
+    <div class="top-bar">
+      <div class="date-card">
+        <span class="date-number">24/03/2022</span>
+        <span class="date-label">Data especial</span>
+      </div>
+    </div>
+
+    <main class="center-panel">
+      <div class="content-card">
+        <h1>Olá!</h1>
+        <p>Você está dentro do espaço reservado para datas especiais.</p>
+        <button id="show-message-button">Mostrar mensagem</button>
+        <div id="message-box" class="message-box hidden">
+          <p id="special-text">Em breve você receberá aqui o texto especial que vamos montar juntos.</p>
+          <img id="special-photo" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Foto especial" />
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-note">
+      Troque as datas e a imagem quando desejar. Este app está pronto para ser hospedado no Render.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
