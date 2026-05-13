@@ -1,6 +1,6 @@
 const VALID_CREDENTIALS = {
   username: "emy",
-  password: "29.03"
+  password: "24.03"
 };
 
 const backgroundImages = [
