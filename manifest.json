@@ -1,0 +1,25 @@
+{
+  "name": "Surpresa Emy",
+  "short_name": "Surpresa Emy",
+  "description": "Uma surpresa especial feita com carinho",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111",
+  "theme_color": "#ff9ec5",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "images/Captura de tela 2026-05-13 124214.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/Captura de tela 2026-05-13 124214.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

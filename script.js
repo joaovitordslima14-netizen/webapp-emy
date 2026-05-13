@@ -42,6 +42,17 @@ const specialText = document.getElementById("special-text");
 const specialPhoto = document.getElementById("special-photo");
 const backgroundGrid = document.getElementById("background-grid");
 
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(registration => {
+      console.log('Service Worker registered successfully:', registration);
+    })
+    .catch(error => {
+      console.log('Service Worker registration failed:', error);
+    });
+}
+
 // Debug logs
 console.log("Script loaded");
 console.log("Login form:", loginForm);

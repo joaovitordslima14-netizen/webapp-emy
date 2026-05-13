@@ -8,6 +8,23 @@ Este é um webapp simples em HTML, CSS e JavaScript que mostra um slideshow de f
 2. Faça login usando as credenciais definidas em `script.js`.
 3. Depois de logado, clique em **Mostrar mensagem** para ver o texto e a foto especial.
 
+## Instalação como App (PWA)
+
+O webapp pode ser instalado como um aplicativo nativo no celular:
+
+### Android (Chrome)
+1. Abra o site no Chrome
+2. Toque no menu (⋮) > "Adicionar à tela inicial"
+3. Confirme a instalação
+
+### iOS (Safari)
+1. Abra o site no Safari
+2. Toque no botão de compartilhamento
+3. Selecione "Adicionar à Tela de Início"
+4. Confirme a instalação
+
+Após a instalação, o app aparecerá na tela inicial como um aplicativo normal e funcionará offline!
+
 ## Personalização
 
 - Altere o login em `script.js` no objeto `VALID_CREDENTIALS`.
