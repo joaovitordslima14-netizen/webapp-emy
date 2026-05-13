@@ -95,7 +95,7 @@ Nas últimas semanas, a gente voltou a conversar com mais frequência, e isso me
 
 Hoje eu tenho um carinho enorme por você. Me preocupo de verdade com você, com o que você passa no dia a dia, com seu cansaço, com seu estresse. Se dependesse só de mim, eu faria o que estivesse ao meu alcance para te ajudar sempre. Mas ao mesmo tempo, eu não quero invadir seu espaço — só quero estar presente da forma certa.
 
-Quando você me manda mensagem, eu fico genuinamente feliz. É até engraçado, porque parece aquele meu eu criança lá do 2º ano do fundamental, feliz só por conseguir conversar com a menina que achava bonita. Kkkkk. Acho que isso mostra o quanto você sempre foi especial pra mim.
+Quando você me manda mensagem, eu fico genuinamente feliz. É até engraçado, porque parece aquele meu eu criança lá do 2º ano do fundamental, feliz só por conseguir conversar com a menina que achava bonita Kkkkk. Acho que isso mostra o quanto você sempre foi especial pra mim.
 
 Essa surpresa não é para pressionar, nem para cobrar nada. É só para que, nos dias em que você estiver cansada, estressada ou passando por alguma crise, você possa lembrar que existe alguém que quer te apoiar, conversar, distrair ou simplesmente estar ali. Sem exageros, sem invasão, só com respeito.
 
