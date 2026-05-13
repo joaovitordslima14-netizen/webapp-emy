@@ -42,19 +42,30 @@ const specialText = document.getElementById("special-text");
 const specialPhoto = document.getElementById("special-photo");
 const backgroundGrid = document.getElementById("background-grid");
 
+// Debug logs
+console.log("Script loaded");
+console.log("Login form:", loginForm);
+console.log("Login screen:", loginScreen);
+console.log("App:", app);
+console.log("Background grid:", backgroundGrid);
+
 let slideIndex = 0;
 let slideInterval;
 
 function updateBackgrounds() {
+  console.log("Updating backgrounds, slideIndex:", slideIndex);
   const bgItems = Array.from(backgroundGrid.querySelectorAll(".bg-item"));
+  console.log("Found bgItems:", bgItems.length);
   bgItems.forEach((item, position) => {
     const currentIndex = (slideIndex + position * 3) % backgroundImages.length;
+    console.log("Setting image for position", position, ":", backgroundImages[currentIndex]);
     item.style.backgroundImage = `url('${backgroundImages[currentIndex]}')`;
     item.classList.add("visible");
   });
 }
 
 function startSlideshow() {
+  console.log("Starting slideshow");
   updateBackgrounds();
   slideInterval = setInterval(() => {
     slideIndex = (slideIndex + 3) % backgroundImages.length;
@@ -63,6 +74,7 @@ function startSlideshow() {
 }
 
 function showApp() {
+  console.log("Showing app");
   loginScreen.classList.add("hidden");
   app.classList.remove("hidden");
   startSlideshow();
