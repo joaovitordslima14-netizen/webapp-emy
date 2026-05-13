@@ -30,16 +30,16 @@ body {
   position: fixed;
   inset: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  padding: 18px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 12px;
   z-index: 0;
   pointer-events: none;
 }
 
 .bg-item {
   position: relative;
-  min-height: 100vh;
+  flex: 1;
   border-radius: 28px;
   overflow: hidden;
   background-size: contain;
@@ -233,5 +233,14 @@ button:hover {
 
   .top-bar {
     gap: 12px;
+  }
+
+  .background-grid {
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .bg-item {
+    border-radius: 16px;
   }
 }
